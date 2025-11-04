@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { clsx } from 'clsx';
 import { getRandomWord } from "./utils"
+import takeClose from './assets/take_close.png'
+import takeOpen from './assets/take_open.png'
 
 
 export default function App() {
@@ -70,14 +72,14 @@ export default function App() {
     if (isItAnotherTake) {
       return(
         <div key={index} className={classNames}>
-          <img src='/src/assets/take_close.png' alt=''/>
+          <img src={takeClose} alt=''/>
           <span>{index + 1}</span>
         </div>      
       )
     } else {
       return(
         <div key={index} className={classNames}>
-          <img src='/src/assets/take_open.png' alt=''/>
+          <img src={takeOpen} alt=''/>
         </div>      
       )
     }
